@@ -7,6 +7,7 @@
           <img :src="item.img" alt="이미지가 존재하지 않습니다"/>
           <span class="title">{{item.name}}</span>
         </a>
+        <span class="tag" v-if="item.isUpdate">N</span>
       </li>
     </ul>
   </div>
@@ -47,6 +48,7 @@ li {
 }
 
 .item {
+  position: relative;
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 25px;
 }
@@ -63,5 +65,16 @@ img {
   width: 100%;
   background: #ebebeb;
   border-radius: 4px;
+}
+
+.tag {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 4px;
+  background: #fc2332;
+  font-weight: bold;
 }
 </style>
